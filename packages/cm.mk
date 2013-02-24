@@ -1,6 +1,6 @@
 # Extra packages from CM-10.1
 PRODUCT_PACKAGES += \
-    DSPManager \
+#    DSPManager \
     libcyanogen-dsp \
     CMFileManager \
     Torch \
