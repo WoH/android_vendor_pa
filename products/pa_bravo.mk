@@ -27,6 +27,9 @@ PREFS_FROM_SOURCE ?= false
 # Include ParanoidAndroid common configuration
 include vendor/pa/config/pa_common.mk
 
+# Include ParanoidAndroid a2sd configuration
+include vendor/pa/config/a2sd.mk
+
 # Inherit AOSP device configuration
 $(call inherit-product, device/htc/bravo/full_bravo.mk)
 
