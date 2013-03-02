@@ -177,6 +177,13 @@
     {
         "remote":       "github",
         "account":      "Evervolv",
+        "repository":   "android_packages_providers_MediaProvider",
+        "target_path":  "packages/providers/MediaProvider",
+        "revision":     "jellybean"
+    },
+    {
+        "remote":       "github",
+        "account":      "Evervolv",
         "repository":   "android_system_bluetooth",
         "target_path":  "system/bluetooth",
         "revision":     "jellybean"

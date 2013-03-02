@@ -32,6 +32,10 @@
         "path":     "hardware/libhardware_legacy"
     },
     {
+        "name":     "platform/packages/providers/MediaProvider",
+        "path":     "packages/providers/MediaProvider"
+    },
+    {
         "name":     "platform/system/bluetooth",
         "path":     "system/bluetooth"
     },
@@ -40,7 +44,7 @@
         "path":     "system/core"
     },
     {
-        "name":     "platform/system/extras",
+        "name":     "ParanoidAndroid/android_system_extras",
         "path":     "system/extras"
     },
     {
