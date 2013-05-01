@@ -6,7 +6,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Copy specific ROM files
 PRODUCT_COPY_FILES += \
-    vendor/pa/prebuilt/common/apk/GooManager.apk:system/app/GooManager.apk 
+    vendor/pa/prebuilt/common/apk/GooManager.apk:system/app/GooManager.apk \
+    vendor/pa/prebuilt/common/apk/LowSoundFixer.apk:system/app/LowSoundFixer.apk 
 
 # init.d support
 PRODUCT_COPY_FILES += \
