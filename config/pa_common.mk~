@@ -4,11 +4,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.config.notification_sound=Proxima.ogg \
   ro.config.alarm_alert=Cesium.ogg
 
+<<<<<<< HEAD
 # Copy specific ROM files
 PRODUCT_COPY_FILES += \
+    vendor/pa/prebuilt/common/apk/GooManager.apk:system/app/GooManager.apk \
     vendor/pa/prebuilt/common/apk/Calendar.apk:system/app/Calendar.apk \
     vendor/pa/prebuilt/common/apk/LowSoundFixer.apk:system/app/LowSoundFixer.apk 
 
+=======
+>>>>>>> d94c128966ab7deea0488f27fb8d8700393c4995
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/pa/prebuilt/common/bin/sysinit:system/bin/sysinit \
@@ -87,8 +91,13 @@ PRODUCT_COPY_FILES += \
     vendor/pa/prebuilt/$(PA_CONF_SOURCE).conf:system/etc/paranoid/backup.conf
 
 PA_VERSION_MAJOR = 3
+<<<<<<< HEAD
+PA_VERSION_MINOR = 5
+PA_VERSION_MAINTENANCE = 6
+=======
 PA_VERSION_MINOR = 6
 PA_VERSION_MAINTENANCE = 0
+>>>>>>> d94c128966ab7deea0488f27fb8d8700393c4995
 PA_PREF_REVISION = 1
 
 TARGET_CUSTOM_RELEASETOOL :=source vendor/pa/tools/squisher
