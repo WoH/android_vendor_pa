@@ -16,7 +16,7 @@
         "path":     "frameworks/base"
     },
     {
-        "name":     "ParanoidAndroid/android_frameworks_native",
+        "name":     "platform/frameworks/native",
         "path":     "frameworks/native"
     },
     {

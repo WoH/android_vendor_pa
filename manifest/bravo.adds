@@ -86,13 +86,6 @@
     {
         "remote":       "github",
         "account":      "Evervolv",
-        "repository":   "android_hardware_qcom_camera",
-        "target_path":  "hardware/qcom/camera",
-        "revision":     "jellybean-4.3"
-    },
-    {
-        "remote":       "github",
-        "account":      "Evervolv",
         "repository":   "android_hardware_qcom_display-legacy",
         "target_path":  "hardware/qcom/display-legacy",
         "revision":     "jellybean-4.3"
