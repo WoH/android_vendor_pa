@@ -8,19 +8,14 @@
         "path":     "frameworks/native"
     },
     {
-        "name":     "ParanoidAndroid/android_frameworks_opt_telephony",
-        "path":     "frameworks/opt/telephony"
-    },
-    {
         "name":     "platform/hardware/libhardware",
         "path":     "hardware/libhardware"
     },
     {
         "name":     "platform/hardware/libhardware_legacy",
         "path":     "hardware/libhardware_legacy"
-    },
     {
-        "name":     "device/common",
-        "path":     "device/common"
+        "name":     "platform/system/vold",
+        "path":     "system/vold"
     }
 ]

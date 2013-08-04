@@ -13,32 +13,31 @@
 # limitations under the License.
 
 # Check for target product
-ifeq (pa_mako,$(TARGET_PRODUCT))
+ifeq (pa_m7ul,$(TARGET_PRODUCT))
 
 # Define PA bootanimation size
 PARANOID_BOOTANIMATION_NAME := XHDPI
 
 # OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_xhdpi
+OVERLAY_TARGET := pa_xxhdpi
 
 # Build paprefs from sources
-PREFS_FROM_SOURCE ?= true
+PREFS_FROM_SOURCE := true
 
 # Include ParanoidAndroid common configuration
 include vendor/pa/config/pa_common.mk
 
-# Inherit AOSP device configuration
-$(call inherit-product, device/lge/mako/full_mako.mk)
+$(call inherit-product, device/htc/m7ul/full_m7ul.mk)
 
-# Product Package Extras - Repos can be added manually or via addprojects.py
--include vendor/pa/packages/mako.mk
+# CM Extras
+-include vendor/pa/packages/cm.mk
 
 # Override AOSP build properties
-PRODUCT_NAME := pa_mako
-PRODUCT_BRAND := Google
-PRODUCT_MODEL := Nexus 4
-PRODUCT_MANUFACTURER := LGE
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=occam BUILD_FINGERPRINT="google/occam/mako:4.3/JSS15J/737497:user/release-keys" PRIVATE_BUILD_DESC="occam-user 4.3 JSS15J 737497 release-keys"
+PRODUCT_NAME := pa_m7ul
+PRODUCT_BRAND := htc
+PRODUCT_MODEL := HTC One
+PRODUCT_MANUFACTURER := HTC
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=m7 BUILD_ID=JZO54K BUILD_FINGERPRINT="htc_europe/m7/m7:4.1.2/JZO54K/177101.12:user/release-keys" PRIVATE_BUILD_DESC="1.29.401.12 CL177101 release-keys"
 
 # Update local_manifest.xml
 GET_VENDOR_PROPS := $(shell vendor/pa/tools/getvendorprops.py $(PRODUCT_NAME))
@@ -46,4 +45,3 @@ GET_PROJECT_RMS := $(shell vendor/pa/tools/removeprojects.py $(PRODUCT_NAME))
 GET_PROJECT_ADDS := $(shell vendor/pa/tools/addprojects.py $(PRODUCT_NAME))
 
 endif
-

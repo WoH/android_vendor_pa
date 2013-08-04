@@ -24,11 +24,6 @@ PRODUCT_COPY_FILES += \
     vendor/pa/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
     vendor/pa/prebuilt/common/bin/50-backupScript.sh:system/addon.d/50-backupScript.sh
 
-# Bring in camera effects
-PRODUCT_COPY_FILES +=  \
-    vendor/pa/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
-    vendor/pa/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
-
 # Bring in all video files
 $(call inherit-product, frameworks/base/data/videos/VideoPackage2.mk)
 
@@ -42,6 +37,10 @@ else
         ParanoidPreferences
 endif
 
+# ParanoidOTA
+PRODUCT_PACKAGES += \
+    ParanoidOTA
+
 ifneq ($(PARANOID_BOOTANIMATION_NAME),)
     PRODUCT_COPY_FILES += \
         vendor/pa/prebuilt/common/bootanimation/$(PARANOID_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
@@ -50,12 +49,10 @@ else
         vendor/pa/prebuilt/common/bootanimation/XHDPI.zip:system/media/bootanimation.zip
 endif
 
-# T-Mobile theme engine
-include vendor/pa/config/themes_common.mk
-
-#Embed superuser into settings 
+# embed superuser into settings 
 SUPERUSER_EMBEDDED := true
-
+ PRODUCT_PACKAGES += \
+        su
 # device common prebuilts
 ifneq ($(DEVICE_COMMON),)
     -include vendor/pa/prebuilt/$(DEVICE_COMMON)/prebuilt.mk
@@ -84,23 +81,24 @@ PRODUCT_COPY_FILES += \
 
 PA_VERSION_MAJOR = 3
 PA_VERSION_MINOR = 9
-PA_VERSION_MAINTENANCE = 0
+PA_VERSION_MAINTENANCE = 2
 PA_PREF_REVISION = 1
 
-TARGET_CUSTOM_RELEASETOOL :=source vendor/pa/tools/squisher
+TARGET_CUSTOM_RELEASETOOL := source vendor/pa/tools/squisher
 
 VERSION := $(PA_VERSION_MAJOR).$(PA_VERSION_MINOR)$(PA_VERSION_MAINTENANCE)
 ifeq ($(DEVELOPER_VERSION),true)
-    PA_VERSION := dev_$(BOARD)-$(VERSION)-$(shell date +%0d%^b%Y-%H%M%S)
+    PA_VERSION := dev_$(BOARD)-$(VERSION)-$(shell date -u +%Y%m%d)
 else
-    PA_VERSION := $(TARGET_PRODUCT)-$(VERSION)-$(shell date +%0d%^b%Y-%H%M%S)
+    PA_VERSION := $(TARGET_PRODUCT)-$(VERSION)-$(shell date -u +%Y%m%d)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.modversion=$(PA_VERSION) \
   ro.pa.family=$(PA_CONF_SOURCE) \
   ro.pa.version=$(VERSION) \
-  ro.papref.revision=$(PA_PREF_REVISION)
+  ro.papref.revision=$(PA_PREF_REVISION) 
+
 
 # goo.im properties
 ifneq ($(DEVELOPER_VERSION),true)
