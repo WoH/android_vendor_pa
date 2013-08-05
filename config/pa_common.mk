@@ -1,8 +1,8 @@
 # Set audio
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.config.ringtone=Themos.ogg \
-  ro.config.notification_sound=Proxima.ogg \
-  ro.config.alarm_alert=Cesium.ogg
+    ro.config.ringtone=Themos.ogg \
+    ro.config.notification_sound=Proxima.ogg \
+    ro.config.alarm_alert=Cesium.ogg
 
 # Copy specific ROM files
 PRODUCT_COPY_FILES += \
@@ -104,13 +104,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.modversion=$(PA_VERSION) \
   ro.pa.family=$(PA_CONF_SOURCE) \
   ro.pa.version=$(VERSION) \
-  ro.papref.revision=$(PA_PREF_REVISION) 
-
-
-# goo.im properties
-ifneq ($(DEVELOPER_VERSION),true)
-    PRODUCT_PROPERTY_OVERRIDES += \
-      ro.goo.developerid=WoH \
-      ro.goo.rom=paranoidandroidforbravo \
-      ro.goo.version=$(shell date +%s)
-endif
+  ro.papref.revision=$(PA_PREF_REVISION)
