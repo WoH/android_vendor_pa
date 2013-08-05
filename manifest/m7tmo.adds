@@ -1,8 +1,0 @@
-[
-    {
-        "remote":       "paranoid",
-        "repository":   "android_packages_apps_paranoidpreferences",
-        "target_path":  "packages/apps/ParanoidPreferences",
-        "revision":     "jb43"
-    }
-]
