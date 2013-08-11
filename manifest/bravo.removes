@@ -1,6 +1,6 @@
 [
     {
-        "name":     "ParanoidAndroid/android_bionic",
+        "name":     "platform/bionic",
         "path":     "bionic"
     },
     {
@@ -16,7 +16,7 @@
         "path":     "frameworks/base"
     },
     {
-        "name":     "ParanoidAndroid/android_frameworks_native",
+        "name":     "platform/frameworks/native",
         "path":     "frameworks/native"
     },
     {
@@ -60,7 +60,7 @@
         "path":     "device/common"
     },
     {
-        "name":     "ParanoidAndroid/android_frameworks_opt_telephony",
+        "name":     "platform/frameworks/opt/telephony",
         "path":     "frameworks/opt/telephony"
     }
 ]
