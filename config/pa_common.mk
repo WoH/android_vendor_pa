@@ -24,6 +24,9 @@ PRODUCT_COPY_FILES += \
     vendor/pa/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
     vendor/pa/prebuilt/common/bin/50-backupScript.sh:system/addon.d/50-backupScript.sh
 
+# T-Mobile theme engine
+include vendor/pa/packages/theme_engine.mk
+
 # Gesture enabled JNI
 PRODUCT_COPY_FILES += \
     vendor/pa/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so
@@ -107,7 +110,7 @@ else
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.modversion=$(PA_VERSION) \
-  ro.pa.family=$(PA_CONF_SOURCE) \
-  ro.pa.version=$(VERSION) \
-  ro.papref.revision=$(PA_PREF_REVISION)
+    ro.modversion=$(PA_VERSION) \
+    ro.pa.family=$(PA_CONF_SOURCE) \
+    ro.pa.version=$(VERSION) \
+    ro.papref.revision=$(PA_PREF_REVISION)
