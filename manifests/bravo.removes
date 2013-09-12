@@ -4,10 +4,6 @@
         "path":     "bionic"
     },
     {
-        "name":     "ParanoidAndroid/android_dalvik",
-        "path":     "dalvik"
-    },
-    {
         "name":     "platform/external/wpa_supplicant_8",
         "path":     "external/wpa_supplicant_8"
     },
@@ -28,7 +24,7 @@
         "path":     "hardware/ril"
     },
     {
-        "name":     "platform/hardware/libhardware",
+        "name":     "ParanoidAndroid/android_hardware_libhardware",
         "path":     "hardware/libhardware"
     },
     {

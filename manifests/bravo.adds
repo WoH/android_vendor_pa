@@ -8,13 +8,6 @@
     },
     {
         "remote":       "github",
-        "account":      "WoH",
-        "repository":   "android_dalvik",
-        "target_path":  "bionic",
-        "revision":     "jellybean-4.3"
-    },
-    {
-        "remote":       "github",
         "account":      "Evervolv",
         "repository":   "android_external_wpa_supplicant_8",
         "target_path":  "external/wpa_supplicant_8",
