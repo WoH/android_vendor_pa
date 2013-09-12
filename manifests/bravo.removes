@@ -4,7 +4,7 @@
         "path":     "bionic"
     },
     {
-        "name":     "ParanoidAndroid/android_dalvik",
+        "name":     "platform/dalvik",
         "path":     "dalvik"
     },
     {
@@ -56,7 +56,7 @@
         "path":     "system/security"
     },
     {
-        "name":     "platform/system/vold",
+        "name":     "ParanoidAndroid/android_system_vold",
         "path":     "system/vold"
     },
     {
