@@ -9,6 +9,41 @@
     {
         "remote":       "github",
         "account":      "Evervolv",
+        "repository":   "android_device_common",
+        "target_path":  "device/common",
+        "revision":     "jellybean-4.3"
+    },
+    {
+        "remote":       "github",
+        "account":      "WoH",
+        "repository":   "android_device_htc_bravo",
+        "target_path":  "device/htc/bravo",
+        "revision":     "jellybean-4.3"
+    },
+    {
+        "remote":       "github",
+        "account":      "WoH",
+        "repository":   "android_device_htc_qsd8k-common",
+        "target_path":  "device/htc/qsd8k-common",
+        "revision":     "jellybean-4.3"
+    },
+    {
+        "remote":       "github",
+        "account":      "Evervolv",
+        "repository":   "android_external_bluetooth_bluedroid",
+        "target_path":  "external/bluetooth/bluedroid",
+        "revision":     "jellybean-4.3"
+    },
+    {
+        "remote":       "github",
+        "account":      "Evervolv",
+        "repository":   "android_external_webkit",
+        "target_path":  "external/webkit",
+        "revision":     "jellybean-4.3"
+    },
+    {
+        "remote":       "github",
+        "account":      "Evervolv",
         "repository":   "android_external_wpa_supplicant_8",
         "target_path":  "external/wpa_supplicant_8",
         "revision":     "jellybean-4.3"
@@ -36,16 +71,16 @@
     },
     {
         "remote":       "github",
-        "account":      "Evervolv",
-        "repository":   "android_hardware_atheros",
-        "target_path":  "hardware/atheros",
+        "account":      "WoH",
+        "repository":   "android_frameworks_opt_telephony",
+        "target_path":  "frameworks/opt/telephony",
         "revision":     "jellybean-4.3"
     },
     {
         "remote":       "github",
         "account":      "Evervolv",
-        "repository":   "android_hardware_gpsshim",
-        "target_path":  "hardware/gpsshim",
+        "repository":   "android_hardware_broadcom_libbt",
+        "target_path":  "hardware/broadcom/libbt",
         "revision":     "jellybean-4.3"
     },
     {
@@ -62,13 +97,6 @@
         "target_path":  "hardware/libhardware_legacy",
         "revision":     "jellybean-4.3"
     },
-    {
-        "remote":       "github",
-        "account":      "Evervolv",
-        "repository":   "android_hardware_ril",
-        "target_path":  "hardware/ril",
-        "revision":     "jellybean-4.3"
-    },
    {
         "remote":       "github",
         "account":      "Evervolv",
@@ -76,7 +104,7 @@
         "target_path":  "hardware/qcom/audio-legacy",
         "revision":     "jellybean-4.3"
     },
-    {
+   {
         "remote":       "github",
         "account":      "Evervolv",
         "repository":   "android_hardware_qcom_bt",
@@ -100,13 +128,6 @@
     {
         "remote":       "github",
         "account":      "Evervolv",
-        "repository":   "android_hardware_qcom_keymaster",
-        "target_path":  "hardware/qcom/keymaster",
-        "revision":     "jellybean-4.3"
-    },
-    {
-        "remote":       "github",
-        "account":      "Evervolv",
         "repository":   "android_hardware_qcom_media-legacy",
         "target_path":  "hardware/qcom/media-legacy",
         "revision":     "jellybean-4.3"
@@ -114,22 +135,29 @@
     {
         "remote":       "github",
         "account":      "Evervolv",
-        "repository":   "android_hardware_qcom_power",
-        "target_path":  "hardware/qcom/power",
+        "repository":   "android_hardware_ril",
+        "target_path":  "hardware/ril",
         "revision":     "jellybean-4.3"
     },
     {
         "remote":       "github",
         "account":      "Evervolv",
-        "repository":   "android_hardware_qcom_sensors",
-        "target_path":  "hardware/qcom/sensors",
+        "repository":   "android_kernel_htc_qsd8k",
+        "target_path":  "kernel/htc/qsd8k",
+        "revision":     "jellybean-4.3"
+    }
+    {
+        "remote":       "github",
+        "account":      "Evervolv",
+        "repository":   "android_packages_apps_Bluetooth",
+        "target_path":  "packages/apps/Bluetooth",
         "revision":     "jellybean-4.3"
     },
     {
         "remote":       "github",
-        "account":      "Evervolv",
-        "repository":   "android_hardware_qcom_wlan",
-        "target_path":  "hardware/qcom/wlan",
+        "account":      "WoH",
+        "repository":   "android_packages_apps_Settings",
+        "target_path":  "packages/apps/Settings",
         "revision":     "jellybean-4.3"
     },
     {
@@ -142,8 +170,8 @@
     {
         "remote":       "github",
         "account":      "Evervolv",
-        "repository":   "android_system_bluetooth",
-        "target_path":  "system/bluetooth",
+        "repository":   "android_prebuilts_gcc_linux-x86_arm_arm-eabi-4.4.3",
+        "target_path":  "prebuilts/gcc/linux-x86/arm/arm-eabi-4.4.3
         "revision":     "jellybean-4.3"
     },
     {
@@ -156,57 +184,15 @@
     {
         "remote":       "github",
         "account":      "Evervolv",
-        "repository":   "android_system_extras",
-        "target_path":  "system/extras",
+        "repository":   "android_vendor_htc",
+        "target_path":  "vendor/htc",
         "revision":     "jellybean-4.3"
-    },
-    {
-        "remote":       "github",
-        "account":      "Evervolv",
-        "repository":   "android_system_security",
-        "target_path":  "system/security",
-        "revision":     "jellybean-4.3"
-    },
-    {
-        "remote":       "github",
-        "account":      "Evervolv",
-        "repository":   "android_system_vold",
-        "target_path":  "system/vold",
-        "revision":     "jellybean-4.3"
-    },
+    }
     {
         "remote":       "github",
         "account":      "WoH",
-        "repository":   "android_frameworks_opt_telephony",
-        "target_path":  "frameworks/opt/telephony",
-        "revision":     "jellybean-4.3"
-    },
-    {
-        "remote":       "github",
-        "account":      "Evervolv",
-        "repository":   "android_device_common",
-        "target_path":  "device/common",
-        "revision":     "jellybean-4.3"
-    },
-    {
-        "remote":       "github",
-        "account":      "CyanogenMod",
-        "repository":   "android_device_generic_armv7-a-neon",
-        "target_path":  "device/generic/armv7-a-neon",
-        "revision":     "cm-10.2"
-    },
-    {
-        "remote":       "github",
-        "account":      "CyanogenMod",
-        "repository":   "android_device_generic_common",
-        "target_path":  "device/generic/common",
-        "revision":     "cm-10.2"
-    },
-    {
-        "remote":       "github",
-        "account":      "Evervolv",
-        "repository":   "android_device_generic_goldfish",
-        "target_path":  "device/generic/goldfish",
+        "repository":   "android_vendor_pa",
+        "target_path":  "vendor/pa",
         "revision":     "jellybean-4.3"
     }
 ]

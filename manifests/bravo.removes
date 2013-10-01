@@ -4,6 +4,18 @@
         "path":     "bionic"
     },
     {
+        "name":     "device/common",
+        "path":     "device/common"
+    },
+    {
+        "name":     "platform/external/bluetooth/bluedroid",
+        "path":     "external/bluetooth/bluedroid"
+    },
+    {
+        "name":     "platform/external/webkit",
+        "path":     "external/webkit"
+    },
+    {
         "name":     "platform/external/wpa_supplicant_8",
         "path":     "external/wpa_supplicant_8"
     },
@@ -20,8 +32,12 @@
         "path":     "frameworks/native"
     },
     {
-        "name":     "platform/hardware/ril",
-        "path":     "hardware/ril"
+        "name":     "platform/frameworks/opt/telephony",
+        "path":     "frameworks/opt/telephony"
+    },
+    {
+        "name":     "platform/hardware/broadcom/libbt",
+        "path":     "hardware/broadcom/libbt"
     },
     {
         "name":     "ParanoidAndroid/android_hardware_libhardware",
@@ -32,35 +48,27 @@
         "path":     "hardware/libhardware_legacy"
     },
     {
-        "name":     "platform/packages/providers/MediaProvider",
-        "path":     "packages/providers/MediaProvider"
+        "name":     "platform/hardware/ril",
+        "path":     "hardware/ril"
     },
     {
-        "name":     "platform/system/bluetooth",
-        "path":     "system/bluetooth"
+        "name":     "platform/packages/apps/Bluetooth",
+        "path":     "packages/apps/Bluetooth"
+    },
+    {
+        "name":     "ParanoidAndroid/android_packages_apps_Settings",
+        "path":     "packages/apps/Settings"
+    },
+    {
+        "name":     "platform/packages/providers/MediaProvider",
+        "path":     "packages/providers/MediaProvider"
     },
     {
         "name":     "ParanoidAndroid/android_system_core",
         "path":     "system/core"
     },
     {
-        "name":     "ParanoidAndroid/android_system_extras",
-        "path":     "system/extras"
-    },
-    {
-        "name":     "platform/system/security",
-        "path":     "system/security"
-    },
-    {
-        "name":     "ParanoidAndroid/android_system_vold",
-        "path":     "system/vold"
-    },
-    {
-        "name":     "device/common",
-        "path":     "device/common"
-    },
-    {
-        "name":     "platform/frameworks/opt/telephony",
-        "path":     "frameworks/opt/telephony"
+        "name":     "ParanoidAndroid/android_vendor_pa",
+        "path":     "vendor/pa"
     }
 ]
