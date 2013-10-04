@@ -152,7 +152,7 @@
         "repository":   "android_kernel_htc_qsd8k",
         "target_path":  "kernel/htc/qsd8k",
         "revision":     "jellybean-4.3"
-    }
+    },
     {
         "remote":       "github",
         "account":      "Evervolv",
@@ -194,7 +194,7 @@
         "repository":   "android_vendor_htc",
         "target_path":  "vendor/htc",
         "revision":     "jellybean-4.3"
-    }
+    },
     {
         "remote":       "github",
         "account":      "WoH",
