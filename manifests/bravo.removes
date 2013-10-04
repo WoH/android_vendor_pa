@@ -48,6 +48,10 @@
         "path":     "hardware/libhardware_legacy"
     },
     {
+        "name":     "platform/hardware/msm7k",
+        "path":     "hardware/msm7k"
+    },
+    {
         "name":     "platform/hardware/ril",
         "path":     "hardware/ril"
     },
