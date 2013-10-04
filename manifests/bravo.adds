@@ -86,6 +86,13 @@
     {
         "remote":       "github",
         "account":      "Evervolv",
+        "repository":   "android_hardware_broadcom_wlan",
+        "target_path":  "hardware/broadcom/wlan",
+        "revision":     "jellybean-4.3"
+    },
+    {
+        "remote":       "github",
+        "account":      "Evervolv",
         "repository":   "android_hardware_libhardware",
         "target_path":  "hardware/libhardware",
         "revision":     "jellybean-4.3"
@@ -97,14 +104,14 @@
         "target_path":  "hardware/libhardware_legacy",
         "revision":     "jellybean-4.3"
     },
-   {
+    {
         "remote":       "github",
         "account":      "Evervolv",
         "repository":   "android_hardware_qcom_audio-legacy",
         "target_path":  "hardware/qcom/audio-legacy",
         "revision":     "jellybean-4.3"
     },
-   {
+    {
         "remote":       "github",
         "account":      "Evervolv",
         "repository":   "android_hardware_qcom_bt",
@@ -171,7 +178,7 @@
         "remote":       "github",
         "account":      "Evervolv",
         "repository":   "android_prebuilts_gcc_linux-x86_arm_arm-eabi-4.4.3",
-        "target_path":  "prebuilts/gcc/linux-x86/arm/arm-eabi-4.4.3
+        "target_path":  "prebuilts/gcc/linux-x86/arm/arm-eabi-4.4.3",
         "revision":     "jellybean-4.3"
     },
     {
