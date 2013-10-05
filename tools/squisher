@@ -165,9 +165,10 @@ echo
 mkdir $REPACK/cache
 mkdir $REPACK/cache/recovery
 echo --wipe_data > $REPACK/cache/recovery/command
-echo --wipe_cache >> $REPACK/cache/recovery/command
 echo --update_package=CACHE:rom.zip >> $REPACK/cache/recovery/command
 echo --update_package=CACHE:gapps.zip >> $REPACK/cache/recovery/command
+echo --wipe_cache >> $REPACK/cache/recovery/command
+echo --wipe_dalvik >> $REPACK/cache/recovery/command
 cp $OUTFILE $REPACK/cache/rom.zip
 cp $ANDROID_BUILD_TOP/gapps/$NEWESTGAPPS $REPACK/cache/gapps.zip
 echo
