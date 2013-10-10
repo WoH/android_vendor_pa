@@ -38,13 +38,12 @@ fi
 OPTICHARGER=$ANDROID_BUILD_TOP/vendor/pa/tools/opticharger
 QUIET=-q
 DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
-
 REPACK=$OUT/repack.d
+
 printf "Sanitizing environment..."
 rm -rf $REPACK
 mkdir -p $REPACK
 echo
-
 
 # Unpack the otapackage and opticharge all apks
 mkdir $REPACK/ota
@@ -124,10 +123,6 @@ java -Xmx1024m \
 	-jar $ANDROID_BUILD_TOP/out/host/$OUT_TARGET_HOST/framework/signapk.jar \
 	-w $SECURITYDIR/testkey.x509.pem $SECURITYDIR/testkey.pk8 \
 	$REPACK/update.zip $OUTFILE
-echo
-printf "Cleaning up..."
-rm -rf $REPACK
-echo
 
 # Create a md5 checksum image of the repacked package
 (
@@ -135,12 +130,81 @@ img=`basename $OUTFILE`
 cd `dirname $OUTFILE`
 $MD5 $img >$img.md5sum
 echo
-echo "Package complete: $OUTFILE"
 cat $img.md5sum
 echo
 )
 
+# Get GAPPS
+wget 'http://goo.im/json2&path=/devs/paranoidandroid/roms/gapps&query=pa_gapps' -O $REPACK/goo.json
+NEWESTGAPPS=`cat $REPACK/goo.json | grep -P -o -e 'pa_gapps.*?.zip' -m 1 | head -1`
+
+echo
+printf "Fetching latest GAPPS..."
+echo
+(
+if [ -f $ANDROID_BUILD_TOP/gapps/$NEWESTGAPPS ];
+then
+    echo "Gapps package $NEWESTGAPPS found"
+    echo
+else
+    echo "Gapps package $NEWESTGAPPS not found, trying to download ..."
+    echo
+
+    rm -rf $ANDROID_BUILD_TOP/gapps
+    mkdir -p $ANDROID_BUILD_TOP/gapps
+    cd $ANDROID_BUILD_TOP/gapps
+    wget "http://goo.im/devs/paranoidandroid/roms/gapps/$NEWESTGAPPS"
+fi
+)
+
+# Create cache
+echo
+printf "Creating installer cache partition..."
+echo
+(
+mkdir $REPACK/cache
+mkdir $REPACK/cache/recovery
+echo --wipe_data > $REPACK/cache/recovery/command
+echo --update_package=CACHE:rom.zip >> $REPACK/cache/recovery/command
+echo --update_package=CACHE:gapps.zip >> $REPACK/cache/recovery/command
+echo --wipe_cache >> $REPACK/cache/recovery/command
+echo --wipe_dalvik >> $REPACK/cache/recovery/command
+cp $OUTFILE $REPACK/cache/rom.zip
+cp $ANDROID_BUILD_TOP/gapps/$NEWESTGAPPS $REPACK/cache/gapps.zip
+echo
+ls $REPACK/cache -sh
+echo
+printf "mkuserimg.sh $REPACK/cache $REPACK/cache.img ext4 tmp 500M"
+echo
+mkuserimg.sh $REPACK/cache $REPACK/cache.img ext4 /cache 500M
+rm -rf $REPACK/cache
+)
+
+# Zip cache image + MD5
+echo
+printf "Zipping installer cache partition..."
+echo
+(
+cd $REPACK
+echo "zip $QUIET $OUT/image_$PAVERSION.zip cache.img"
+echo
+zip $QUIET $OUT/image_$PAVERSION.zip cache.img
+$MD5 $OUT/image_$PAVERSION.zip >$OUT/image_$PAVERSION.zip.md5sum
+echo
+cat $OUT/image_$PAVERSION.zip.md5sum
+)
+
+echo
+printf "Cleaning up..."
+rm -rf $REPACK
+echo
+
+ls -sh $OUT
+echo
+
+echo "Package complete: $OUTFILE"
 echo $OUTFILE > $OUT/romPath
 echo $PAVERSION.zip > $OUT/romName
+echo
 
 exit 0
