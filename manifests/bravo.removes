@@ -31,9 +31,13 @@
         "name":     "ParanoidAndroid/android_frameworks_native",
         "path":     "frameworks/native"
     },
-    {
+        {
         "name":     "platform/frameworks/opt/telephony",
         "path":     "frameworks/opt/telephony"
+    },
+    {
+        "name":     "platform/frameworks/opt/vcard",
+        "path":     "frameworks/opt/vcard"
     },
     {
         "name":     "platform/hardware/broadcom/libbt",
@@ -68,8 +72,20 @@
         "path":     "packages/providers/MediaProvider"
     },
     {
+        "name":     "platform/system/bluetooth",
+        "path":     "system/bluetooth"
+    },
+    {
         "name":     "ParanoidAndroid/android_system_core",
         "path":     "system/core"
+    },
+    {
+        "name":     "ParanoidAndroid/android_system_extras",
+        "path":     "system/extras"
+    },
+        {
+        "name":     "ParanoidAndroid/android_system_vold",
+        "path":     "system/vold"
     },
     {
         "name":     "ParanoidAndroid/android_vendor_pa",
