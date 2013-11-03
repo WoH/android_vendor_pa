@@ -29,10 +29,24 @@
     },
     {
         "remote":       "github",
+        "account":      "CyanogenMod",
+        "repository":   "android_external_bash",
+        "target_path":  "external/bash,
+        "revision":     "cm-10.2"
+    },
+    {
+        "remote":       "github",
         "account":      "Evervolv",
         "repository":   "android_external_bluetooth_bluedroid",
         "target_path":  "external/bluetooth/bluedroid",
         "revision":     "jellybean-4.3"
+    },
+    {
+        "remote":       "github",
+        "account":      "CyanogenMod",
+        "repository":   "android_external_libncurses",
+        "target_path":  "external/libncurses,
+        "revision":     "cm-10.2"
     },
     {
         "remote":       "github",
@@ -74,6 +88,13 @@
         "account":      "WoH",
         "repository":   "android_frameworks_opt_telephony",
         "target_path":  "frameworks/opt/telephony",
+        "revision":     "jellybean-4.3"
+    },
+    {
+        "remote":       "github",
+        "account":      "WoH",
+        "repository":   "android_frameworks_opt_vcard",
+        "target_path":  "frameworks/opt/vcard",
         "revision":     "jellybean-4.3"
     },
     {
@@ -186,6 +207,27 @@
         "account":      "WoH",
         "repository":   "android_system_core",
         "target_path":  "system/core",
+        "revision":     "jellybean-4.3"
+    },
+    {
+        "remote":       "github",
+        "account":      "Evervolv",
+        "repository":   "android_system_bluetooth",
+        "target_path":  "system/bluetooth",
+        "revision":     "jellybean-4.3"
+    },
+    {
+        "remote":       "github",
+        "account":      "Evervolv",
+        "repository":   "android_system_extras",
+        "target_path":  "system/extras",
+        "revision":     "jellybean-4.3"
+    },
+    {
+        "remote":       "github",
+        "account":      "Evervolv",
+        "repository":   "android_system_vold",
+        "target_path":  "system/vold",
         "revision":     "jellybean-4.3"
     },
     {
