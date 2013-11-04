@@ -27,15 +27,11 @@ PREFS_FROM_SOURCE ?= false
 # Include ParanoidAndroid common configuration
 include vendor/pa/main.mk
 
-
 # Include ParanoidAndroid a2sd configuration
 include vendor/pa/configs/a2sd.mk
 
 # Inherit AOSP device configuration
 $(call inherit-product, device/htc/bravo/full_bravo.mk)
-
-# Product Package Extras - Repos can be added manually or via addprojects.py
--include vendor/pa/packages/cm.mk
 
 # Override AOSP build properties
 PRODUCT_NAME    := pa_bravo
