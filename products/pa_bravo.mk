@@ -25,10 +25,11 @@ OVERLAY_TARGET := pa_hdpi
 PREFS_FROM_SOURCE ?= false
 
 # Include ParanoidAndroid common configuration
-include vendor/pa/config/pa_common.mk
+include vendor/pa/main.mk
+
 
 # Include ParanoidAndroid a2sd configuration
-include vendor/pa/config/a2sd.mk
+include vendor/pa/configs/a2sd.mk
 
 # Inherit AOSP device configuration
 $(call inherit-product, device/htc/bravo/full_bravo.mk)
@@ -43,14 +44,5 @@ PRODUCT_DEVICE  := bravo
 PRODUCT_MODEL   := HTC Desire
 PRODUCT_MANUFACTURER := HTC
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_bravo BUILD_FINGERPRINT=htc_wwe/htc_bravo/bravo:2.3.3/GRI40/96875.1:user/release-keys TARGET_BUILD_TYPE=userdebug BUILD_VERSION_TAGS=release-keys PRIVATE_BUILD_DESC="3.14.405.1 CL96875 release-keys"
-
-# Include ParanoidAndroid repos configuration
-include vendor/pa/config/pa_addons.mk
-
-# Do (not) include CM extras
-EXTRA_CM_PACKAGES ?= false
-
-# Do (not) build ParanoidOTA
-NO_OTA_BUILD ?= true
 
 endif
