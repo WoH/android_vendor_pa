@@ -12,15 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+PRODUCT_PACKAGES += \
+        Busybox
+
 # Source or prebuilt PA-prefs logic
-ifneq ($(PREFS_FROM_SOURCE),true)
-    PRODUCT_COPY_FILES += \
-        vendor/pa/prebuilt/common/apk/ParanoidPreferences.apk:system/app/ParanoidPreferences.apk
-else
-    # Build paprefs from sources
-    PRODUCT_PACKAGES += \
-        ParanoidPreferences
-endif
+#ifneq ($(PREFS_FROM_SOURCE),true)
+#    PRODUCT_COPY_FILES += \
+#        vendor/pa/prebuilt/apk/ParanoidPreferences.apk:system/app/ParanoidPreferences.apk
+#else
+#    # Build paprefs from sources
+#    PRODUCT_PACKAGES += \
+#        ParanoidPreferences
+#endif
 
 # Include ParanoidOTA
 ifneq ($(NO_OTA_BUILD),true)
@@ -31,9 +34,13 @@ endif
 # Include bootanimation
 ifneq ($(PARANOID_BOOTANIMATION_NAME),)
     PRODUCT_COPY_FILES += \
-        vendor/pa/prebuilt/common/bootanimation/$(PARANOID_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
+        vendor/pa/prebuilt/bootanimation/$(PARANOID_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
 else
     PRODUCT_COPY_FILES += \
-        vendor/pa/prebuilt/common/bootanimation/XHDPI.zip:system/media/bootanimation.zip
+        vendor/pa/prebuilt/bootanimation/XHDPI.zip:system/media/bootanimation.zip
 endif
+
+# ro.pa used by ParanoidOTA
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.pa=true
 

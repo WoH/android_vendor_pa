@@ -25,7 +25,7 @@ OVERLAY_TARGET := pa_tvdpi
 PREFS_FROM_SOURCE ?= false
 
 # Include ParanoidAndroid common configuration
-include vendor/pa/config/pa_common.mk
+include vendor/pa/main.mk
 
 # Inherit AOSP device configuration
 $(call inherit-product, device/asus/tilapia/full_tilapia.mk)
@@ -35,10 +35,7 @@ PRODUCT_NAME := pa_tilapia
 PRODUCT_BRAND := Google
 PRODUCT_MODEL := Nexus 7
 PRODUCT_MANUFACTURER := Asus
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=nakasi BUILD_FINGERPRINT="google/nakasig/tilapia:4.3/JSS15J/737497:user/release-keys"
-PRIVATE_BUILD_DESC="nakasi-user 4.3 JSS15J 737497 release-keys"
-
-# Include ParanoidAndroid repos configuration
-include vendor/pa/config/pa_addons.mk
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=nakasi BUILD_FINGERPRINT="google/nakasig/tilapia:4.4/KRT16M/737497:user/release-keys"
+PRIVATE_BUILD_DESC="nakasi-user 4.4 KRT16M 737497 release-keys"
 
 endif
