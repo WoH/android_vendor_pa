@@ -1,19 +1,19 @@
 # ParanoidAndroid Extras
 import /init.superuser.rc
+import init.power.rc
 
 on init
     export ANDROID_CACHE /cache
     export TERMINFO /system/etc/terminfo
     export TERM linux
+    export SD_EXT_DIRECTORY /sd-ext
+    mkdir /sd-ext 0771 system system
 
 on post-fs-data
     mkdir /cache/dalvik-cache 0771 system system
     chown system system /cache/dalvik-cache
     chmod 0771 /cache/dalvik-cache
     mkdir /data/.ssh 0750 root shell
-
-    # Run sysinit
-    start sysinit
 
 on boot
     chown system system /sys/block/mmcblk0/queue/scheduler
@@ -37,8 +37,9 @@ on property:service.adb.tcp.port=-1
     stop adbd
     start adbd
 
-# sysinit (/system/etc/init.d)
-service sysinit /system/bin/sysinit
+#zram
+service enable_zram /system/bin/enable_zram
+    class main
     user root
+    group root
     oneshot
-    disabled
