@@ -38,8 +38,6 @@ on property:service.adb.tcp.port=-1
     start adbd
 
 #zram
-service enable_zram /system/bin/enable_zram
-    class main
-    user root
-    group root
-    oneshot
+on property:sys.zram.restored=true
+    write /proc/sys/vm/page-cluster 0
+    swapon_all /data/system/fstab.zram
